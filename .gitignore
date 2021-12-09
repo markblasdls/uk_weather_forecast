@@ -34,3 +34,21 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+
+### Specific to App
+.sass-cache/
+*.DS_Store
+.tddium*
+coverage/
+vendor/
+public/uploads*
+public/assets*
+dump.rdb
+add-config.sh
+.env
+.env.bak
+sidekiq.pid
+spec/examples.txt
+funding_approval_checklist*.pdf
+poa*.pdf
