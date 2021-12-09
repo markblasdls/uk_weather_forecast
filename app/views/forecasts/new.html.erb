@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center">
+    <div class="container">
+        <br/>
+        <div class="row">
+            <% 
+                alert_class = { 
+                    'Cold' => 'primary', 
+                    'Warm' => 'warning', 
+                    'Hot' => 'danger', 
+                }
+                alert = alert_class[notice].nil? ? 'secondary' : alert_class[notice]
+            
+            %>
+            <% if notice %>
+                <div class="alert alert-<%=alert%>" role="alert">
+                    <%= notice %>
+                </div>
+            <% end %>
+        </div>
+        <div class="row">
+            <%= simple_form_for @forecast do |f| %>
+            <%= f.input :postcode %>
+            <br/>
+            <%= f.button :submit, 'Get Forecast', :class => 'btn btn-primary' %>
+            <% end %>
+        </div>
+    </div>
+</div>
